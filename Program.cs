@@ -101,7 +101,7 @@ namespace Save_Demo
 
                         // использую String.Format для совместимости с древними компиляторами
 						// а символ : низя использовать в названиях файлов :(
-                        string dirname = String.Format("{0}.{1}.{2} {3}-{4}   {5}   {6}", 
+                        string dirname = String.Format("{0}.{1:d2}.{2:d2} {3:d2}-{4:d2}   {5}   {6}", 
                             date.Year, date.Month, date.Day, date.Hour, date.Minute, command, playerName).Trim();
 
                         Directory.CreateDirectory(Path.Combine(demosPath, dirname));
