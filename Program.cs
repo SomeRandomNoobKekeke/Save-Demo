@@ -7,7 +7,10 @@ using System.Text.RegularExpressions;
  * 
  * исполняемый файл программы надо положить в папку куда сохраняются демки
  * 
- * как скомпилировать если у вас нет visual studio: я хз
+ * как скомпилировать если у вас нет visual studio:
+ * сходите в C:\Windows\Microsoft.NET\Framework64 
+ * выберите там самый новый, найдите в нем csc.exe
+ * перетащите program.cs на csc.exe
 */
 namespace Save_Demo
 {
