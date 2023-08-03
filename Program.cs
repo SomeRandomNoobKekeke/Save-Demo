@@ -7,12 +7,7 @@ using System.Text.RegularExpressions;
  * 
  * исполняемый файл программы надо положить в папку куда сохраняются демки
  * 
- * как скомпилировать если у вас нет visual studio:
- * кладете этот файл в любую папку, shift + пкм -> открыть окно команд, csc program.cs
- * csc это компилятор c# который есть в любом windows
- * если csc не является командой то сходите в C:\Windows\Microsoft.NET\Framework 
- * выберите там самый новый, найдите в нем csc.exe
- * перетащите program.cs на csc.exe
+ * как скомпилировать если у вас нет visual studio: я хз
 */
 namespace Save_Demo
 {
@@ -37,7 +32,7 @@ namespace Save_Demo
                     if (deleteAutoDems) Console.WriteLine("автоматически сделаные демки удаляются!");
                     if (!deleteAutoDems) Console.WriteLine("автоматически сделаные демки сохраняются");
                     Console.WriteLine("- удалить эти демки, ! переключить сохранение автодемок, = сохранить без имени");
-                    Console.Write(delimitor);
+                    Console.WriteLine(delimitor);
                     Console.WriteLine(DateTime.Now.ToString() + " " + DateTime.Now.Millisecond.ToString());
                     Console.WriteLine();
 
@@ -99,7 +94,7 @@ namespace Save_Demo
 
                         DateTime date = File.GetCreationTime(dems[0]);
 
-                        // использую String.Format для совместимости с древними компиляторами
+                        // использую String.Format для совместимости с древними компиляторами (зря кста)
 						// а символ : низя использовать в названиях файлов :(
                         string dirname = String.Format("{0}.{1:d2}.{2:d2} {3:d2}-{4:d2}   {5}   {6}", 
                             date.Year, date.Month, date.Day, date.Hour, date.Minute, command, playerName).Trim();
